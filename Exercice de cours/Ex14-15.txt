@@ -1,0 +1,72 @@
+//EXERCICE 14 PHP N°1
+
+function calculateAge(year,month,day){
+
+    let actualDate = new Date('2018-05-21');
+
+    let actualYear = actualDate.getFullYear();
+
+    let actualMonth = actualDate.getMonth();
+
+    let actualDay = actualDate.getDay();
+
+    let numberOfYear = actualYear - year;
+
+    let numberOfMonth = actualMonth - month;
+
+    let numberOfDay = actualDay - day;
+
+    return `Age de la personne : ${numberOfYear} ans ${Math.abs(numberOfMonth)} mois ${Math.abs(numberOfDay)} jours`;
+
+};
+
+console.log(calculateAge(1985,1,17));
+
+// EXERCICE 15 PHP N°1
+
+class Personne {
+
+    constructor(lastname, firstname, date){
+
+        this.lastname = lastname;
+
+        this.firstname = firstname;
+
+        this.date = date;
+
+        this.year = date.slice(0, 4);
+
+    }
+
+    age(x) {
+
+        return x - this.year;
+
+    }
+
+};
+
+
+ 
+
+let date = new Date();
+
+let year = date.getFullYear();
+
+
+ 
+
+const firstPerson = new Personne("DUPONT","Michel","1980-02-19");
+
+const secondPerson = new Personne("DUCHEMIN","Alice","1985-01-17");
+
+
+ 
+
+console.log(`${firstPerson.firstname} ${firstPerson.lastname} a ${firstPerson.age(year)} ans`);
+
+console.log(`${secondPerson.firstname} ${secondPerson.lastname} a ${secondPerson.age(year)} ans`);
+ 
+
+
+ 
