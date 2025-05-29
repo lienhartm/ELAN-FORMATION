@@ -1,0 +1,58 @@
+body {
+  background-color: darkgrey;
+  text-align: center;
+}
+h1 {
+  padding-top: 50px;
+}
+fieldset {
+  background-color: white;
+}
+.default {
+  background-color: #e7e7e7; color: black;
+} /* Gray */
+.default:hover {
+  background: #ddd;
+}
+.page {
+  border: 2px solid black;
+} /*marqueur de page*/
+.action {
+  border: none;
+}
+.button {
+  background-color: gray; /* Green */
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+.table {
+  width: 100%;
+  text-align: center;
+  border-color: black;
+  background-color: white;
+}
+table {
+  margin: 0 auto 0 auto;
+  table-layout: auto;
+  width: 600px;
+  text-align: center;
+}
+table, th, td {
+  border-collapse: collapse;
+  border-color: black;
+  border: 1px solid black;
+}
+.supprimer {
+  border: none;
+}
+.left {
+  float:left;
+}
+.right {
+  float:right;
+}
