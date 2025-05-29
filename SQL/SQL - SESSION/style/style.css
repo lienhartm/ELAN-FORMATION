@@ -1,0 +1,44 @@
+/*
+    DEBUT DE FEUILLE DE STYLE
+*/
+/*
+            NAV
+*/
+body {
+    background-color: aqua;
+}
+header {
+    height: 100px;
+    text-align: center;
+}
+.log {
+    text-align: center;
+}
+nav {
+    text-align: center;
+}
+li.nav {
+    display: inline;
+    padding-inline: 20px;
+}
+li.nav > a {
+    text-decoration: none;
+}
+/*
+            MAIN
+*/
+iframe {
+    width: 1500px;
+    height:650px;
+    border:none;
+    margin: 50px;
+    background-color: azure;
+}
+form {
+    background-color: white;
+}
+
+
+/*
+    FIN DE PAGE DE STYLE
+*/

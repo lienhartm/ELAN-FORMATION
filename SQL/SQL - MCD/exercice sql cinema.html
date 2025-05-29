@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+    </head>
+    <body>
+        <table border="2">
+            <tr>
+              <td class="col">LIENHART<br>MICHAEL</td>
+              <td class="titre" rowspan="2">EXERCICES</td>
+              <td class="col">SQL</td>    
+            </tr>
+            <tr>
+              <td class="col">06/10/2022</td>
+              <td class="col"></td>    
+            </tr>
+        </table>
+        <ol>
+            <li><h3>ENTREPRISE</h3></li>
+            <p>
+                Une entreprise représentée par une raison sociale, une adresse (+ cp / ville) et une date de création possède des salariés (nom, prénom, date de naissance, date d'embauche). On partira du principe qu'un salarié appartient à une et une seule entreprise.
+                Un salarié possède un type de contrat (CDI, CDD, intérim, ...). En cas de CDD, le salarié possède une date de fin de contrat (facultative si le salarié est en CDI).
+            </p>
+            <ul><li><a href="entreprise.png" alt="mcd-entreprise">MCD</a></li></ul>
+            <li><h3>LIVRES</h3> </li>
+            <p>
+                Un auteur (nom, prénom, sexe, date de naissance) possède une bibliographie de livres (titre, date de sortie, nombre de pages, résumé). Il n'y aura pas de livres co-écrits dans la base de données. Un livre pourra posséder plusieurs genres (roman, fantastique, policier,...)
+            </p>
+            <ul><li><a href="livre.png" alt="mcd-livre">MCD</a></li></ul>
+            <li><h3>E-COMMERCE</h3></li>
+            <p>
+            Un client (numéro de client, nom, prénom, adresse mail, mot de passe, date d'inscription, coordonnées de votre choix) peut réaliser des commandes auprès d'un site e-commerce à une date donnée.
+            Le site met en vente des produits (désignation, prix) appartenant à une catégorie unique. Ceux-ci peuvent être commandés en de multiples exemplaires.
+            </p>
+            <ul><li><a href="ecommerce.png" alt="mcd-ecommerce.png">MCD</a></li></ul>
+            <li><h3>FORUM</h3></li>
+            <p>
+            Vous êtes en charge de réaliser un forum.
+            Celui-ci est constitué de sujets (ou topics) qui appartiennent à une catégorie unique. L'auteur du sujet (qui est un membre du forum) peut décider de verrouiller un sujet. Un sujet pourra évidemment contenir des messages (ou posts).
+            Sur un forum les catégories sont triées alphabétiquement sur le nom, les sujets dans l'ordre antéchronologique et les messages dans l'ordre chronologique.
+            Les membres du forum se connectent au forum avec un identifiant (mail), possède un pseudo, un mot de passe et un rôle (celui-ci sera contenu dans un tableau dans l'entité membre). On pourrait retrouver plusieurs rôles prédéfinis : Admin, modérateur ou membre "classique" par exemple.
+            </p>
+            <ul><li><a href="forum.png" alt="mcd-forum">MCD</a></li></ul>
+            <li><h3>CINEMA</h3></li>
+            <p>
+            Vous avez en charge de gérer une base de données de films, de genres cinématographiques et d’acteurs / actrices.
+            Les films seront identifiés par un identifiant unique, leur titre, leur année de sortie en France, leur durée (en minutes) ainsi que leur réalisateur (unique). Un résumé du film (synopsis) pourra éventuellement être renseigné, une note (sur 5) ainsi qu’une affiche du film.
+            Chaque film pourra posséder un ou plusieurs genres cinématographiques (science-fiction, aventure, action, …) identifiés par un numéro unique et un libellé.
+            Votre base de données devra recenser également les acteurs de chacun des films. On désire connaître le nom, le prénom, le sexe et la date de naissance de l’acteur ainsi que le rôle (nom du personnage) joué par l’acteur dans le(s) film(s) concerné(s).
+            <br><br><b>Travail à réaliser :</b><br><br>
+            <ol>
+                <li>Réalisez le MCD d’une telle gestion des données (le MLD et le script SQL seront également généré avec JMerise).</li>
+                <br>
+                <ul>
+                    <li><a href="cinema.png" target="_blank">MCD</a></li>
+                    <li><a href="mld-cinema.png" target="_blank">MLD</a></li>
+                    <li><a href="cinema.sql" target="_blank">Script SQL</a></li>
+                </ul><br>
+                <li>Créez un script d’insertion de données grâce aux échantillons de données fournis en annexe (il est évident que vous pouvez prévoir plus de données que dans l’exemple).</li>
+                <br><a href="insert-cinema.sql" target="_blank">Script d'insertion (sans données car non fournis en annexe)</a><br><br>
+                <li>Réalisez les requêtes SQL suivantes avec PhpMyAdmin (rédigez les requêtes dans un document Word afin de garder un historique de celles-ci) : entre parenthèse les champs servant de référence aux requêtes.</li>
+                <ol type="a"><br>
+                    <li>Informations d’un film (id_film) : titre, année, durée (au format HH:MM) et réalisateur</li>
+                        <pre>
+                            <code>
+                                SELECT f.id_film, f.nom, f.date_de_sortie, f.duree, re.nom FROM film AS f 
+                                INNER JOIN realisateur AS re ON f.id_realisateur = re.id_realisateur
+                            </code>
+                        </pre>
+                    <li>Liste des films dont la durée excède 2h15 classés par durée (du plus long au plus court</li>
+                        <pre>
+                            <code>
+                                SELECT f.id_film, f.nom FROM film AS f 
+                                WHERE duree > 135
+                            </code>
+                        </pre>
+                    <li>Liste des films d’un réalisateur (en précisant l’année de sortie)</li>
+                        <pre>
+                            <code>
+                                SELECT f.id_film, f.nom, f.date_de_sortie, re.nom FROM film AS f 
+                                INNER JOIN realisateur AS re ON f.id_realisateur = re.id_realisateur 
+                                WHERE re.id_realisateur = 1
+                            </code>
+                        </pre>
+                    <li>Nombre de films par genre (classés dans l’ordre décroissant)</li>
+                        <pre>
+                            <code>
+                                SELECT COUNT(*) AS nombre, g.libelle FROM film f 
+                                INNER JOIN genre g ON f.id_genre = g.id_genre 
+                                GROUP BY g.libelle ORDER BY nombre DESC
+                            </code>
+                        </pre>
+                    <li>Nombre de films par réalisateur (classés dans l’ordre décroissant)</li>
+                        <pre>
+                            <code>
+                                SELECT COUNT(*) AS NOMBRE, re.nom FROM film AS f 
+                                INNER JOIN realisateur as re ON f.id_realisateur = re.id_realisateur 
+                                GROUP BY re.nom
+                            </code>
+                        </pre>
+                    <li>Casting d’un film en particulier (id_film) : nom, prénom des acteurs + sexe</li>
+                        <pre>
+                            <code>
+                                SELECT f.id_film , a.nom, a.prenom, a.sexe FROM acteur AS a 
+                                INNER JOIN film AS f ON a.id_acteur = f.id_film 
+                                WHERE f.id_realisateur = 1
+                            </code>
+                        </pre>
+                    <li>Films joués par un acteur en particulier (id_acteur) avec leur rôle et l’année de sortie (du film le plus récent au plus ancien)</li>
+                        <pre>
+                            <code>
+                                SELECT F.nom, A.nom, r.nom, f.date_de_sortie FROM ACTEUR AS a 
+                                INNER JOIN casting AS c ON a.id_acteur = c.id_acteur 
+                                INNER JOIN role AS r ON c.id_role = r.id_role 
+                                INNER JOIN film AS f ON f.id_film = c.id_film 
+                                WHERE a.nom = 'Aty' ORDER BY date_de_sortie desc
+                            </code>
+                        </pre>
+                    <li>Listes des personnes qui sont à la fois acteurs et réalisateurs</li>
+                        <pre>
+                            <code>
+                                SELECT * FROM ACTEUR 
+                                INNER JOIN CASTING ON ACTEUR.ID_ACTEUR = CASTING.ID_ACTEUR 
+                                INNER JOIN FILM ON CASTING.ID_FILM = FILM.ID_FILM 
+                                INNER JOIN REALISATEUR FILM.ID_REALISATEUR = REALISATEUR.ID_REALISATEUR
+                            </code>
+                        </pre>
+                    <li>Liste des films qui ont moins de 5 ans (classés du plus récent au plus ancien)</li>    
+                        <pre>
+                            <code>
+                                SELECT f.nom, f.date_DE_SORTIE FROM ACTEUR AS a 
+                                INNER JOIN casting AS c ON a.id_acteur = c.id_acteur
+                                INNER join FILM AS f ON f.id_film = c.id_film
+                                INNER JOIN role AS r ON r.id_role = c.id_role
+                                WHERE YEAR( f.date_de_sortie ) < 2010
+                                GROUP BY f.id_film
+                            </code>
+                        </pre>
+                    <li>Nombre d’hommes et de femmes parmi les acteurs</li>
+                        <pre>
+                            <code>
+                                CREATE VIEW nb_homme AS SELECT COUNT(*) AS homme FROM acteur WHERE sexe = 'Masculin'
+                                CREATE VIEW nb_femme AS SELECT COUNT(*) AS femme FROM acteur WHERE sexe = 'Féminin'
+                                SELECT * FROM nb_homme, nb_femme
+                            </code>
+                        </pre>
+                    <li>Liste des acteurs ayant plus de 50 ans (âge révolu et non révolu)</li>
+                        <pre>
+                            <code>
+                                SELECT * FROM ACTEUR 
+                                WHERE DATE_FORMAT(NOW(), "%Y") - YEAR(naissance) > 50;
+                            </code>
+                        </pre>
+                    <li>Acteurs ayant joué dans 3 films ou plus</li>
+                        <pre>
+                            <code>
+                                SELECT COUNT(c.id_film), a.id_acteur, a.nom, a.prenom FROM casting AS c
+                                INNER JOIN acteur AS a ON c.id_acteur = a.id_acteur
+                                GROUP BY a.id_acteur
+                            </code>
+                        </pre>
+                </ol>
+                <li>Grâce à un outil de maquettage (type draw.io), réalisez les écrans principaux de l’application permettant de gérer les différentes entités de la base de données : affichage, insertion / modification / suppression (apportez un soin particulier à l’ergonomie de l’application pour garder une navigation cohérente).</li>
+                    <br><ul><li><a href="cinema.drawio">Maquette du site web</a></li></ul><br>
+                <li>En adoptant le design pattern MVC, développez l’ensemble des interfaces et des composants d’accès aux données.</li>
+                    <br><ul><li><a href="">PDO</a></li></ul><br>
+            </ol>
+        <p>Vous rédigerez le dossier de synthèse du projet en y insérant l’ensemble des productions ci-dessus.</p>
+            <br><ul><li><a href="">Dossier de synthèse</a></li></ul>
+        </ol>
+    </body>
+</html>

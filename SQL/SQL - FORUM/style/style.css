@@ -1,0 +1,13 @@
+header {
+    text-align: center;
+}
+li {
+    display: inline;
+    padding-inline: 20px;
+}
+li > a {
+    text-decoration: none;
+}
+main {
+    margin-top: 50px;
+}

@@ -1,0 +1,39 @@
+SESSION
+
+ ### ### ### ### # ### #   #
+ #   #   #   #   # # # ##  #
+ ### ##  ### ### # # # # # #
+   # #     #   # # # # #  ##
+ ### ### ### ### # ### #   #
+
+
+
+
+
+
+Le programmeur
+
+Véritable journal de bord pour votre outil de suivie en ingienerie pédagogique.
+Il vous permettras de suivre vos enseignement pas à pas comme vos élèves vous serez à votre place.
+Vous pourrez aussi rapportez sur des fiches élèves personalisé les remarques et bulletins.
+Cela vous permettras d'avoir une meilleur approche grace cet outil innovant a la pointe de la technologie.
+Une ingienerie suivras le produit pour promouvoir des eventuels changement, personnalisation et amélioration.
+Ces dernieres seront disponibles a l'aide de demandes, information, reclamation, d'utilisateur des que nous 
+seront capable de les effectuer et les promouvoir nous en avons deja prevus.
+
+C'est avec grand plaisir que nous vous offrons cette version de depart.
+
+    C'est un pas pour nous vers une destination infini...
+
+    La premiere pierre est posé ... il faut batir !
+
+Fonctionnalité:
+
+Inscription de formation
+Inscription d'eleve
+Inscription de module 
+
+Liste des eleves
+Liste des module 
+
+Create Database if not exists 'session'

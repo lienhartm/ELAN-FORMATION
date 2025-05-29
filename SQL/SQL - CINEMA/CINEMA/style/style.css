@@ -1,0 +1,68 @@
+/*
+            DEBUT DE PAGE DE STYLE
+*/
+/*
+            HEADER
+*/
+header {
+    text-shadow: 1px 1px burlywood;
+    background-color: brown;
+    letter-spacing: 2px;
+    color: goldenrod;
+    text-align: center;
+    padding-top: 30px;
+    height: 100px;
+}
+/*
+            NAV
+*/
+nav {
+    background-color: brown;
+    padding: 50px 0 10px 0;
+    text-align: center;
+}
+li.nav {
+    padding-inline: 50px;
+    display: inline;
+}
+li.nav > a {
+    text-shadow: 1px 1px burlywood;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 900;
+    color: white;
+    padding: 5px;
+}
+li.nav > a:hover {
+    color: goldenrod;
+    padding: 5px;
+}
+/*
+            MAIN
+*/
+main {
+    background-color: antiquewhite;
+    scroll-behavior: auto;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: auto;
+}
+
+/*
+            FOOTER
+*/
+/*  vignette */
+
+h6.vignette {
+    background-color: brown;
+    position: relative;
+    text-align: center;
+    color: goldenrod;
+    width: 100%;
+    padding: 25px;
+}
+
+/*
+    FIN DE PAGE DE STYLE
+*/
