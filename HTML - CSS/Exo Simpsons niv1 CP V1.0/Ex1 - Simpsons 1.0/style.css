@@ -1,0 +1,84 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 1200px;
+    justify-content: center;
+}
+body, .center{
+    background-color:gold;
+}
+h1 {
+    background-color:#6495ED;
+    color: white;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+}
+main, header{
+    font-family: Verdana, sans-serif;
+}
+.img-header{
+    width: 100%;
+}
+p{
+    font-size: 12px;
+    word-break: break-all;
+}
+main {
+    margin-top: -5px;
+    background-color: white;
+    display: flex;
+justify-content: center;
+}
+nav{
+    margin: 50px 10px 10px 20px;
+}
+ul{
+    background-color:#6495ED;
+    text-align: center;
+    list-style-type: none;
+    padding: 5px 10px 20px 10px;
+    width:150px;
+}
+a{
+    font-size: 12px;
+    color: white;
+}
+article{
+    margin: 50px 5px 5px 5px;
+}
+article > h2 {
+    margin: 10px 5px 10px 0px;
+    color :gold;
+}
+article > p {
+    margin-left: 0;
+}
+aside{
+    background-color: #6495ED;
+    color: white;
+    margin: 50px 20px 50px 10px;
+}
+aside > img {
+    border: 2px solid white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 10px 40px 10px 40px;
+    align-items: center;
+}
+ 
+aside > h3 {
+    text-align: center;
+}
+aside > h3, p {
+    margin: 10px 10px 10px 10px;
+}
+footer{
+    color: white;
+    background-color: rgb(41,79,152);
+    text-align: center;
+    padding: 10px 10px;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+  background-color:gold;
+}
+
+.header {
+  background-color: #ffffff;
+  margin-top: -4px;
+}
+
+.h1-header {
+    background-color:#6495ED;
+    text-align: center;
+    color: white;
+    padding: 5px;
+}
+
+.img-header{
+    width: 100%;
+    margin-top: -22px;
+}
+
+.menu ul {
+  text-align: center;
+  background-color: #6495ED;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+a:hover {
+  background-color: #6495ED;
+}
+
+.aside {
+  background-color: #6495ED;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.aside-img {
+  border: 2px solid white;
+}
+
+.footer {
+  background-color:rgb(41,79,152);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+<body>
+
+
+  <h1 class="h1-header">Oooooh Pinaise ! ...</h1>
+  <img class="img-header" src="images/dr_les-simpsons.jpg" alt="image loremipsum"/>
+
+<div class="header">
+  <div class="row">
+    <div class="col-3 col-s-3 menu">
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Le film</a></li>
+        <li><a href="#">Personnages</a></li>
+        <li><a href="#">Histoire</a></li>
+        <li><a href="#">Matt Groening</a></li>
+      </ul>
+    </div>
+
+    <div class="col-6 col-s-9">
+      <h1>Les Simpsons</h1>
+      <p>
+        Les Simpson (The Simpsons) est une série télévisée d'animation américaine 
+        créée par Matt Groening et diffusée depuis le 17 décembre 1989 sur le réseau 
+        de l'entreprise américaine Fox Broadcasting Company. Elle met en scène les 
+        Simpson, stéréotype d'une famille de classe moyenne américaine. Leurs aventures 
+        servent une satire du mode de vie américain. Les membres de la famille, tous 
+        ayant la pigmentation de peau de couleur jaune, sont Homer, Marge, Bart, 
+        Lisa et Maggie. Depuis ses débuts, la série a récolté des dizaines de 
+        récompenses, dont trente-deux Primetime Emmy Awards, trente Annie 
+        Awards et un Peabody Award. Le Time Magazine du 31 décembre 1999 l'a 
+        désignée comme la meilleure série télévisée du xxe siècle et elle a obtenu 
+        une étoile sur le Hollywood Walk of Fame le 14 janvier 2000. « D'oh! », 
+        l'expression d'abattement d'Homer Simpson, est entrée dans la langue 
+        anglaise. L'influence des Simpson s'exerce également sur d'autres sitcoms. 
+        En 2007, Les Simpson, le film, un long métrage basé sur la série, est sorti au 
+        cinéma et a recueilli 527 millions de dollars américains en recettes brutes.
+      </p>
+    </div>
+
+    <div class="col-3 col-s-12">
+      <div class="aside">
+        <img class="aside-img" src="images/matt_groening.jpg">
+        <h2>Matt Groening</h2>
+        <p>Matthew Abram Groening est un dessinateur, scénariste et producteur de télévision américain. Il est le créateur du comic strip Life in Hell et des séries télévisées d'animation Les Simpson et Futurama.</p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>©2015 The Simpsons Elan</p>
+</div>
+
+</body>
+</html>

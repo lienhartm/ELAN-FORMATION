@@ -1,0 +1,127 @@
+/*
+      DEBUT DE PAGE
+*/
+/*
+      style.css
+*/
+/*
+      NAV
+*/
+ul.nav > li {
+  padding-inline: 50px;
+  display: inline;
+  text-decoration: none; 
+}
+ul {
+  text-align: center;
+}
+li > a {
+  text-decoration: none;
+  color: black;
+  padding: 5px;
+}
+li > a:hover {
+    background-color: goldenrod;
+    border-radius: 25px;
+    padding: 5px;
+}
+hr {
+  border: 2 solid black;
+}
+/*
+      HEADER
+*/
+.header-container {
+  position: relative;
+  font-family: Arial;
+}
+.overlay {
+  position: absolute; 
+  bottom: 3px; 
+  right:0;
+  left:0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5); /* Black see-through */
+  color: #f1f1f1; 
+  width: 96.5%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding:30px;
+  text-align: center;
+}
+.header-container:hover .overlay {
+  opacity: 1;
+}
+.bottom-left {
+  position: absolute;
+  bottom:0;
+  left: 16px;
+  padding:5px;
+}
+.bottom-right {
+  position: absolute;
+  bottom:0;
+  right: 26px;
+  background-color:red;
+  border-radius:10px;
+  padding:5px;
+  cursor:pointer;
+}
+/*
+      MAIN
+*/
+.main {
+  display: inline-flex;
+  position: relative;
+}
+/*
+      ARTICLE
+*/
+.article {
+  width: auto;
+  margin-left: 50px;
+}
+/*
+      ASIDE
+*/
+aside {
+  background-color: black;
+  scroll-behavior: none;
+  transition: .5s ease;
+  position: relative;
+  color: white;
+  height: 440px;
+  padding: 10px;
+  top: 42px;
+}
+aside > a {
+  text-decoration: none;
+  color: white;
+}
+article > h1 {
+  text-indent: 20px;
+}
+article >p {
+  clear: both;
+}
+#aside {
+  display: none;
+}
+.button {
+  text-align: center;
+}
+/*
+      FOOTER
+*/
+#more {
+  visibility:hidden;
+}
+.align {
+  display: flex;
+  justify-content: space-around;
+}
+/*
+      FIN DE PAGE
+*/

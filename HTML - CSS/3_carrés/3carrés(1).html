@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--<script href="script.js"></script>-->
+		<meta charset="utf-8"/>
+
+		<script>
+
+		function modification() {
+
+		// pointage
+
+			const rouge = document.getElementById("rouge");
+			const vert = document.getElementById("vert");
+			const bleu = document.getElementById("bleu");
+
+		// tirage
+
+		// rouge
+
+			const rouge_layout = document.getElementById("rouge_layout");
+			const rouge_float = document.getElementById("rouge_float");
+			const rouge_zIndex = document.getElementById("rouge_zIndex");
+			const rouge_position = document.getElementById("rouge_position");
+			const rouge_number = document.getElementById("rouge_number");
+
+		// vert
+
+			const vert_layout = document.getElementById("vert_layout");
+			const vert_float = document.getElementById("vert_float");
+			const vert_zIndex = document.getElementById("vert_zIndex");
+			const vert_position = document.getElementById("vert_position");
+			const vert_number = document.getElementById("vert_number");
+
+		// bleu
+
+			const bleu_layout = document.getElementById("bleu_layout");
+			const bleu_float = document.getElementById("bleu_float");
+			const bleu_zIndex = document.getElementById("bleu_zIndex");
+			const bleu_position = document.getElementById("bleu_position");
+			const bleu_number = document.getElementById("bleu_number");
+
+		// affichage
+
+		// ROUGE
+
+			rouge.style.position = rouge_layout.value;
+			if(rouge_float === "right") {
+				rouge.style.right = rouge_float.value;
+			}
+			else {
+				rouge.style.left = rouge_float.value;
+			}
+			rouge.style.zIndex = rouge_zIndex.value;
+			switch(rouge.position) {
+				case "top":
+					rouge.style.top = rouge_number.value;
+					break;
+				case "right":
+					rouge.style.right = rouge_number.value;
+					break;
+				case "bottom":
+					rouge.style.bottom = rouge_number.value;
+					break;
+				case "left":
+					rouge.style.left = rouge_number.value;
+					break;
+				default:"";
+			}
+				
+		// VERT
+
+			vert.style.position = vert_layout.value;
+			if(vert_float === "right") {
+				vert.style.right = vert_float.value;
+			}
+			else {
+				vert.style.left = vert_float.value;
+			}
+			vert.style.zIndex = vert_zIndex.value;
+			switch(vert.position) {
+				case "top":
+					vert.style.top = vert_number.value;
+					break;
+				case "right":
+					vert.style.right = vert_number.value;
+					break;
+				case "bottom":
+					vert.style.bottom = vert_number.value;
+					break;
+				case "left":
+					vert.style.left = vert_number.value;
+					break;
+				default:"";
+			}
+
+		// BLEU
+
+			bleu.style.position = bleu_layout.value;
+			if(bleu_float === "right") {
+				bleu.style.right = bleu_float.value;
+			}
+			else {
+				bleu.style.left = bleu_float.value;
+			}
+			bleu.style.zIndex = bleu_zIndex.value;
+			switch(bleu.position) {
+				case "top":
+					bleu.style.top = bleu_number.value;
+					break;
+				case "right":
+					bleu.style.right = bleu_number.value;
+					break;
+				case "bottom":
+					bleu.style.bottom = bleu_number.value;
+					break;
+				case "left":
+					bleu.style.left = bleu_number.value;
+					break;
+				default:"";
+			}
+		}
+
+		</script>
+		<style>
+			body {
+				box-sizing: border-box;
+				background-color: #EEE;
+			}
+			h1 {
+				text-align: center;
+			}
+			#container {
+				width: 600px;
+				height: 600px;
+				border: 1px solid #CCC;
+				margin: 0 auto;
+				background-color: #FFF;
+			}
+			#rouge, #vert, #bleu {
+				text-align: center;
+			}
+			#rouge {
+				width: 200px;
+				height: 200px;
+				background-color: #F00;
+			}
+			#vert {
+				width: 100px;
+				height: 100px;
+				background-color: #0F0;
+			}
+			#bleu {
+				width: 50px;
+				height: 50px;
+				background-color: #00F;
+			}
+
+		</style>
+	</head>
+	<body>
+		<h1> Les 3 Carrés </h1>
+		<form  onsubmit="return modification()" method="post">
+			<table>
+				<caption></caption>
+				<td>
+					<tr>
+			<!--<p> ROUGE : </p>-->
+						<fieldset>
+							<legend> ROUGE : </legend>
+							<label for="layout"> Layout : </label>
+							<select id="rouge_layout" name="layout">
+								<option value=""></option><br>
+								<option value="absolute">absolute</option><br>
+								<option value="relative">relative</option><br>
+								<option value="fixed">fixed</option><br>
+							</select>
+							<label for="float"> Float : </label>
+							<select id="rouge_float" name="float">
+								<option value=""></option><br>
+								<option value="left">left</option>
+								<option value="right">right</option>
+							</select>
+							<label for="z-index"> Z-index : </label>
+							<select id="rouge_zIndex" name="zIndex">
+								<option value=""></option><br>
+								<option value="1">1</option><br>
+								<option value="2">2</option><br>
+								<option value="3">3</option><br>
+							</select>
+							<label for="position"> Position : </label>
+							<select id="rouge_position" name="layout">
+								<option value=""></option><br>
+								<option value="top">top</option><br>
+								<option value="right">right</option><br>
+								<option value="bottom">bottom</option><br>
+								<option value="left">left</option><br>
+							</select>
+							<label for="pixel"> Valeur : </label>
+							<input type="number" id="rouge_number" name="value" min="0" max="600"> PX
+						</fieldset>
+					</tr>
+					<br>
+					<tr>
+			<!--<p> VERT : </p>-->
+					<fieldset>
+						<legend> VERT : </legend>
+						<label for="layout"> Layout : </label>
+						<select id="vert_layout" name="layout">
+							<option value=""></option><br>
+							<option value="absolute">absolute</option><br>
+							<option value="relative">relative</option><br>
+							<option value="fixed">fixed</option><br>
+						</select>
+						<label for="float"> Float : </label>
+						<select id="vert_float" name="float">
+							<option value=""></option><br>
+							<option value="left">left</option>
+							<option value="right">right</option>
+						</select>
+						<label for="z-index"> Z-index : </label>
+						<select id="vert_zIndex" name="zIndex">
+							<option value=""></option><br>
+							<option value="1">1</option><br>
+							<option value="2">2</option><br>
+							<option value="3">3</option><br>
+						</select>
+						<label for="vert_position"> Position : </label>
+						<select id="position" name="podition">
+							<option value=""></option><br>
+							<option value="top">top</option><br>
+							<option value="right">right</option><br>
+							<option value="bottom">bottom</option><br>
+							<option value="left">left</option><br>
+						</select>
+						<label for="pixel"> Valeur : </label>
+						<input type="number" id="vert_number" name="value" min="0" max="600"> PX
+					</fieldset>
+				</tr>
+				<br>
+				<tr>
+			<!--<p> BLEU : </p>-->
+					<fieldset>
+						<legend> BLEU : </legend>
+						<label for="layout"> Layout : </label>
+						<select id="bleu_layout" name="layout">
+							<option value=""></option><br>
+							<option value="absolute">absolute</option><br>
+							<option value="relative">relative</option><br>
+							<option value="fixed">fixed</option><br>
+						</select>
+						<label for="float"> Float : </label>
+						<select id="bleu_float" name="float">
+							<option value=""></option><br>
+							<option value="left">left</option>
+							<option value="right">right</option>
+						</select>
+						<label for="z-index"> Z-index : </label>
+						<select id="bleu_zIndex" name="Index">
+							<option value=""></option><br>
+							<option value="1">1</option><br>
+							<option value="2">2</option><br>
+							<option value="3">3</option><br>
+						</select>
+						<label for="position"> Position : </label>
+						<select id="bleu_position" name="position">
+							<option value=""></option><br>
+							<option value="top">top</option><br>
+							<option value="right">right</option><br>
+							<option value="bottom">bottom</option><br>
+							<option value="left">left</option><br>
+						</select>
+						<label for="pixel"> Valeur : </label>
+						<input type="number" name="value" id="bleu_number" min="0" max="600"> PX
+					</fieldset>
+				</tr>
+			</td>
+		</table>
+		<center>
+			<input type="submit" value="Appli">
+			<input type="reset" value="Reset">
+		</center>
+		<br><br>
+	</form>
+
+	<div id="container">
+		<div id="rouge">ROUGE</div>
+		<div id="vert">VERT</div>
+		<div id="bleu">BLEU</div>
+	</div>
+</body>
+</html>

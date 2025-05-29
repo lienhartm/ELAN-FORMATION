@@ -1,0 +1,183 @@
+/* DEBUT PAGE CSS */
+
+body {
+    margin: 0;
+    background-color: rgb(128, 128, 128);
+    font-family: Exo, sans-serif;
+  }
+#formation, #equipe, #contact {
+    margin:50px 100px 50px 100px;
+    border-style: dashed;
+    border-color: rgb(255, 165, 0);
+    background-color: white;
+}
+ h3 {
+    margin: 50px 0 20px 65px;
+}
+
+/* DEBUT NAVIGATION */
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(255, 165, 0);
+}
+.topnav > img {
+    height: 50px;
+    width: 50px;
+    float: left;
+    margin: 50px;
+}
+.topnav > p {
+    color: khaki;
+    padding: 50px 0 0 0;
+    float: left;
+}
+.topnav a {
+    float: right;
+    color: khaki;
+    text-align: center;
+    padding: 65px 50px 0 0;
+    text-decoration: none;
+    font-size: 17px;
+}
+@media screen and (max-width:900px) {
+    .topnav {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+        height: 300px;
+    }
+    .topnav p {
+        padding-left: 300px;
+        margin: -130px 50px 0 0;
+    }
+    .topnav a {
+        margin: -30px 0 0 0;
+    }
+}
+
+/* FIN NAVIGATION */
+/* DEBUT IMAGE */
+
+.container {
+    position: relative;
+    text-align: center;
+    filter: grayscale(1);
+    width:100%;
+    height:400px;
+    overflow:hidden;
+}
+.container > img {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: bottom center;
+    filter: grayscale(1);
+    opacity: 0.8;
+    background-color: transparent;
+}
+div > h1, div > h2 {
+    color: white;
+    text-shadow: 2px 2px rgb(128, 128, 128);
+}
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/* FIN IMAGE */
+/* DEBUT TABLEAU */
+
+table, th, td {
+    padding: 10px 10px 10px 10px;
+    border: 1px solid rgb(128, 128, 128);
+    border-collapse: collapse;
+    text-align: center;
+}
+th {
+    background-color: rgb(81, 81, 81);
+    color: white;
+}
+table.center {
+    margin: 0 auto 50px auto;
+    width: 90%;
+}
+
+/* FIN TABLEAU */
+/* DEBUT GRID */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+/*    gap: 50px;*/
+    padding: 0px;
+    margin: 0 0 20px 90px;
+}
+figure > img {
+    border: 2px solid rgb(255, 165, 0);
+    box-shadow: 5px 10px 10px 5px rgb(128, 128, 128, 0.5);
+    border-radius: 4px;
+    /*padding: 5px;*/
+    width: 75%;
+}
+figcaption {
+    font-weight: bold;
+    text-align: center;
+    background-color: rgb(255, 165, 0);
+    color: white;
+    width: 75%;
+    padding: 5px 0 5px 0;
+    margin: -34px 0px 0px 2px;
+    opacity: .8;
+}
+
+/* FIN GRID */
+/* DEBUT CONTACT */
+
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgb(255, 165, 0);
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+input[type=submit] {
+    background-color: rgb(255, 165, 0);
+    color: khaki;
+    width: 50%;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+form {
+        padding: 20px;
+        margin-bottom: 50px;
+        color: rgb(81, 81, 81);
+}
+form > h3 {
+    color: black;
+}
+form > textarea {
+    height:200px;
+}
+
+/* FIN CONTACT */
+/* DEBUT FOOTER */
+
+.footer {
+    padding: 20px;
+    color: white;
+    text-align: center;
+    background: rgb(81, 81, 81);
+}
+
+/* FIN FOOTER */
+
+/* FIN DE PAGE CSS */

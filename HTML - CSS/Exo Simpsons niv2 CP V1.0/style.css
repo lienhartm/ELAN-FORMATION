@@ -1,0 +1,144 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.container{
+    width: 60%;
+    justify-content: center;
+}
+body{
+    background-color:gold;
+}
+h1 {
+    background-color:#6495ED;
+    color: white;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: center;
+}
+main, header{
+    font-family: Verdana, sans-serif;
+}
+nav{
+    background-color:#6495ED;
+    text-align: center;
+    margin: -5px 0 0;
+    padding: 20px 0px 30px 0px;
+}
+a{
+    margin: 20px;
+    font-size: 16px;
+    color: white;
+}
+.img-header{
+    width: 100%;bottom: 0;
+}
+main {
+    margin-top: -5px;
+    background-color: white;
+    display: flex;
+    flex: 60%;
+    justify-content: center;
+    border-top: 2px dashed #6495ED;
+}
+h2 {
+    margin: 10px 5px 10px 50px;
+    color : gold;
+}
+p{
+    font-size: 12px;
+    word-break: break-all;
+    text-indent: 20px;
+    margin: 20px 0 0 0;
+}/*
+article{
+    margin: 50px 5px 5px 5px;
+    display: flex;
+}
+
+article > p {
+    margin-left: 20px;
+
+}
+.img-article {
+    height:200px;
+    width: 200px;
+    display: flex;
+    padding: 10px 10px 10px 10px;
+}
+.img-article > img {
+    margin: 5px 5px 5px 5px;
+    border: ridge black;
+    float: left;
+}*/
+article{
+    width: 600px;
+    border: 2px solid white;
+    padding: 1em;
+    margin: 0 auto;
+    font-family: Verdana, sans-serif;
+    background-color: white;
+    text-align: justify;
+    flex-flow: column
+    }
+article > figure {
+    float: left;
+    margin: 10px 10px 10px 10px;
+}
+aside {
+    background-color: #6495ED;
+    margin: 10px 10px 10px 10px;
+}
+aside > figure {
+      display: flex;
+      flex-flow: column;
+      padding: 20px;
+      max-width: 220px;
+      margin: auto;
+}
+figure > img {
+      max-width: 440px;
+      max-height: 200px;
+      border: 1px solid black;
+}
+figcaption {
+      color: white;
+      font: italic smaller sans-serif;
+      padding: 3px;
+      text-align: center;
+}
+figcaption > p {
+    overflow: hidden;
+}
+footer{
+    color: white;
+    background-color: rgb(41,79,152);
+    text-align: center;
+    padding: 10px 10px;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        width: 100%;
+    }
+    article {   
+        height: 1000px;
+        width: 200px;
+        flex-direction: column;
+        margin-top: 40px;
+    }
+
+    h2 {
+        margin : 0;
+    }
+    main{
+        flex-direction: column;
+    }
+    nav>ul{
+        width: 100%;
+	flex-direction : column;
+    }
+    footer{
+        width: 100%;
+    }  
+}

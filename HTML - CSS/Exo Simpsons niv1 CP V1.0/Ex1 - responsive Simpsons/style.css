@@ -1,0 +1,119 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+.container{
+    width: 60%;
+    justify-content: center;
+}
+body, .center{
+    background-color:gold;
+}
+h1 {
+    background-color:#6495ED;
+    color: white;
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+}
+main, header{
+    font-family: Verdana, sans-serif;
+}
+.img-header{
+    width: 100%;
+}
+p{
+    font-size: 12px;
+    word-break: break-all;
+}
+main {
+    margin-top: -5px;
+    background-color: white;
+    display: flex;
+    flex: 60%;
+    justify-content: center;
+}
+nav{
+    margin: 50px 10px 10px 10px;
+    display: flex;
+    flex: 25%;
+    height: 120px;
+}
+ul{
+    background-color:#6495ED;
+    text-align: center;
+    list-style-type: none;
+    padding: 5px 10px 20px 10px;
+    width:150px;
+}
+a{
+    font-size: 12px;
+    color: white;
+}
+article{
+    margin: 50px 5px 5px 5px;
+    display: block;
+}
+article > h2 {
+    margin: 10px 5px 10px 0px;
+    color :gold;
+}
+article > p {
+    margin-left: 0;
+    display: block;
+}
+aside {
+    background-color: #6495ED;
+    margin: 50px 10px 10px 10px;
+  }
+  figure {
+      display: flex;
+      flex-flow: column;
+      padding: 5px;
+      max-width: 220px;
+      margin: auto;
+  }
+  
+  figure > img {
+      max-width: 440px;
+      max-height: 200px;
+  }
+  
+  figcaption {
+      color: white;
+      font: italic smaller sans-serif;
+      padding: 3px;
+      text-align: center;
+  }
+  figcaption > p {
+    overflow: hidden;
+  }
+
+footer{
+    color: white;
+    background-color: rgb(41,79,152);
+    text-align: center;
+    padding: 10px 10px;
+}
+@media screen and (max-width: 1200px) {
+    header {
+        width: 100%;
+    }
+  .container {   
+    flex-direction: column;
+    display: flex;
+  }
+  main{
+    flex-direction: column;
+    display: flex;
+  }
+  nav>ul{
+    width: 100%;
+  }
+  footer{
+    width: 100%;
+  }
+  
+  
+}
